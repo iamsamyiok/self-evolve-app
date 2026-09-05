@@ -1,0 +1,28 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'ai.monkeycode.selfevolve'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'ai.monkeycode.selfevolve'
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName '1.0'
+        // 服务器地址：更换部署地址时改这一行后重新构建即可
+        buildConfigField 'String', 'SERVER_URL', '"https://3789-8a8a860ad7d1403d.monkeycode-ai.online"'
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+}
